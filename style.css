@@ -1,156 +1,286 @@
-    /* CSS (Styling) */
-    :root {
-        --primary-color: #007bff;
-        --secondary-color: #f8f9fa;
-        --text-color: #333;
-        --light-gray: #e9ecef;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+}
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #fff;
-        color: var(--text-color);
-        line-height: 1.6;
-    }
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./imgs/hero.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    .container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
 
-    /* --- Header --- */
-    header {
-        background: var(--secondary-color);
-        padding: 2rem 0;
-        text-align: center;
-    }
+.hero .overlay {
+  
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+}
 
-    header h1 {
-        font-size: 2.8rem;
-        margin: 0;
-        color: var(--primary-color);
-    }
+.hero h1 {
+  font-size: 4rem;
+  font-family: 'Great Vibes', cursive, sans-serif ;margin-bottom: 0.5rem;
+  color: yellow;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-    header p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        margin: 1rem auto 0;
-    }
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ffff;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-    /* --- Video Section --- */
-    #video-section {
-        padding: 4rem 0;
-        text-align: center;
-        background-color: #f7f7f7;
-    }
-    
-    #video-section h2 {
-        font-size: 2.2rem;
-        margin-bottom: 2rem;
-    }
+.hero button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #df240c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        background: #000;
-        border-radius: 8px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
+.hero button:hover {
+ background-color: #c71a0a;
+ transition: 0.3s ease;
+}
 
-    .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
+.about{
+    padding: 3rem 1rem;
+    /* max-width: 1000px; */
+    margin: 0 0;
+    border: #c71a0a;
+    background-color: black;
+    color: white;  
+}
 
-    /* --- Reviews Section --- */
-    #reviews-section {
-        padding: 4rem 0;
-    }
-    
-    #reviews-section h2 {
-        text-align: center;
-        font-size: 2.2rem;
-        margin-bottom: 3rem;
-    }
+.about h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #e11d48, rgb(248, 252, 16));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-    .review-card {
-        background: var(--secondary-color);
-        border-left: 5px solid var(--primary-color);
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        border-radius: 0 8px 8px 0;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        animation: slideUp 0.5s ease-out forwards;
-        opacity: 0;
-    }
-    
-    /* Animation for Reviews */
-    @keyframes slideUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  padding: 0 2rem;
+}
 
-    .review-card p {
-        margin: 0 0 1rem;
-        font-style: italic;
-    }
+.service_h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #f06292;
+}
 
-    .review-card .reviewer {
-        font-weight: bold;
-        color: var(--primary-color);
-        text-align: right;
-    }
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  
+}
 
-    /* --- Call to Action (CTA) --- */
-    #cta-section {
-        background: var(--primary-color);
-        color: #fff;
-        padding: 4rem 0;
-        text-align: center;
-    }
+.service1, .service2 {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  font-size: 1.5rem;
+}
 
-    #cta-section h2 {
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
-    }
+.service1:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+   box-shadow: 3px 3px 10px rgb(201, 10, 128);
+}
 
-    .cta-button {
-        background-color: #fff;
-        color: var(--primary-color);
-        padding: 1rem 2rem;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
+.service2:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 3px 3px 10px rgb(201, 10, 128);
+}
 
-    .cta-button:hover {
-        background-color: var(--light-gray);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    
-    /* --- Footer --- */
-    footer {
-        text-align: center;
-        padding: 2rem 0;
-        background: var(--secondary-color);
-        font-size: 0.9rem;
-    }
+.service1 ul, .service2 ul {
+  list-style-type: none;
+  padding: 10px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.service1 ul li, .service2 ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+span{
+  color: #e11d48;
+  font-weight: bolder;
+}
+
+ul span {
+  color: #e11d48;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.gallery{
+  background: linear-gradient(to right, #e11d48, rgb(110, 112, 4));
+  padding: 2rem;
+  margin: 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ /* .video {
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  width: 75%;
+  height: 50%;
+  
+} */
+
+.gallery h2{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+}
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+   box-shadow: 3px 3px 10px rgb(201, 10, 128);
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.testimonial {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.reviews, .cta {
+  padding: 1.5rem 0.5rem;
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  text-align: center;
+ }
+
+ .reviews {
+  background-color: black;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  /* color: #e11d48; */
+  color: #f8f8f8;
+}
+
+
+ .reviews .testimonial {
+  font-size: 1.4rem;
+  margin: 0 100px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #f8f8f8;  
+}
+
+.cta {
+  background-color: #33030e;
+  color: white;
+  padding: 3rem 1rem;
+  /* border-radius: 10px; */
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #fff;
+  color: #33030e;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #ffe4ec;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.image-arrow-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.image-arrow {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  animation: imageBounce 2s infinite ease-in-out;
+  filter: drop-shadow(0 0 8px white);
+  transition: transform 0.3s ease;
+}
+
+.image-arrow:active {
+  transform: scale(1.2);
+}
+
+footer {
+  color: #33030e;
+  text-align: center;
+  /* padding: 1.5rem 0; */
+}
+
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+@keyframes imageBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
