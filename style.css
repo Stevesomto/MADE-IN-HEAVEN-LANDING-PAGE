@@ -267,12 +267,42 @@ footer {
 
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .about h1 {
+    font-size: 1.8rem;
+  }
+  .about p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .reviews h2{
+    font-size: 1.6rem;
+    color: orange;
+  }
+
+  .reviews h2::after{
+    content: ":";
+  }
+  .reviews .testimonial {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0 1rem;
+  }
+  hr{
+    border: 0;
+    height: 1px;
+    background: orange;
+    margin: 1.5rem 0;
   }
 }
+
 
 
 
