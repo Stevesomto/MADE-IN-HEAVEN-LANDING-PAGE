@@ -282,7 +282,7 @@ footer {
     text-align: center;
   }
 
-  .reviews h2{
+  .reviews h2, .service_h2{
     font-size: 1.6rem;
     color: orange;
   }
@@ -301,9 +301,59 @@ footer {
     background: orange;
     margin: 1.5rem 0;
   }
+  .service1, .service2 {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  /* .services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service2{
+    order:   2;
+  }
+
+  .service1{
+    order: 1;
+  } */
+
+  ul span {
+  color: #e11d48;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.5rem;
+  }
+
+  .gallery h2{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
 }
 
+  .gallery .images {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .image-arrow {
+    width: 150px;
+  }
+}
 
 
 @keyframes imageBounce {
